@@ -18,34 +18,6 @@ namespace WidgetTesting
             Assert.IsNotNull(AnAddress);
         }
 
-
-
-        [TestMethod]
-        public void ActivePropertyOK()
-        {
-            //create an instance of the class we want to create
-            clsAddress AnAddress = new clsAddress();
-            //create some test data to assign to the property
-            Boolean TestData = true;
-            //assign the data to the property
-            AnAddress.Active = TestData;
-            //test to see that the two values are the same
-            Assert.AreEqual(AnAddress.Active, TestData);
-        }
-
-        [TestMethod]
-        public void DateAddedPropertyOK()
-        {
-            //create an instance of the class we want to create
-            clsAddress AnAddress = new clsAddress();
-            //create some test data to assign to the property
-            DateTime TestData = DateTime.Now.Date;
-            //assign the data to the property
-            AnAddress.DateAdded = TestData;
-            //test to see that the two values are the same
-            Assert.AreEqual(AnAddress.DateAdded, TestData);
-        }
-
         [TestMethod]
         public void AddressNoPropertyOK()
         {
@@ -58,18 +30,7 @@ namespace WidgetTesting
             //test to see that the two values are the same
             Assert.AreEqual(AnAddress.AddressNo, TestData);
         }
-        [TestMethod]
-        public void CountyNoPropertyOK()
-        {
-            //create an instance of the class we want to create
-            clsAddress AnAddress = new clsAddress();
-            //create some test data to assign to the property
-            Int32 TestData = 1;
-            //assign the data to the property
-            AnAddress.CountyNo = TestData;
-            //test to see that the two values are the same
-            Assert.AreEqual(AnAddress.CountyNo, TestData);
-        }
+    
         [TestMethod]
         public void HouseNoPropertyOK()
         {
@@ -83,18 +44,6 @@ namespace WidgetTesting
             Assert.AreEqual(AnAddress.HouseNo, TestData);
         }
 
-        [TestMethod]
-        public void PostCodePropertyOK()
-        {
-            //create an instance of the class we want to create
-            clsAddress AnAddress = new clsAddress();
-            //create some test data to assign to the property
-            string TestData = "LE1 4AB";
-            //assign the data to the property
-            AnAddress.PostCode = TestData;
-            //test to see that the two values are the same
-            Assert.AreEqual(AnAddress.PostCode, TestData);
-        }
         [TestMethod]
         public void StreetPropertyOK()
         {
@@ -119,7 +68,56 @@ namespace WidgetTesting
             //test to see that the two values are the same
             Assert.AreEqual(AnAddress.Town, TestData);
         }
+        [TestMethod]
+        public void CountyNoPropertyOK()
+        {
+            //create an instance of the class we want to create
+            clsAddress AnAddress = new clsAddress();
+            //create some test data to assign to the property
+            string TestData = "Leicestershire";
+            //assign the data to the property
+            AnAddress.County = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AnAddress.County, TestData);
+        }
+        [TestMethod]
+        public void PostCodePropertyOK()
+        {
+            //create an instance of the class we want to create
+            clsAddress AnAddress = new clsAddress();
+            //create some test data to assign to the property
+            string TestData = "LE1 4AB";
+            //assign the data to the property
+            AnAddress.PostCode = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AnAddress.PostCode, TestData);
+        }
+   
+        [TestMethod]
+        public void DateAddedPropertyOK()
+        {
+            //create an instance of the class we want to create
+            clsAddress AnAddress = new clsAddress();
+            //create some test data to assign to the property
+            DateTime TestData = DateTime.Now.Date;
+            //assign the data to the property
+            AnAddress.DateAdded = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AnAddress.DateAdded, TestData);
+        }
 
+        [TestMethod]
+        public void ActivePropertyOK()
+        {
+            //create an instance of the class we want to create
+            clsAddress AnAddress = new clsAddress();
+            //create some test data to assign to the property
+            Boolean TestData = true;
+            //assign the data to the property
+            AnAddress.Active = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AnAddress.Active, TestData);
+        }
     }
 
 }
